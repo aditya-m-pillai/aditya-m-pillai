@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Personal Portfolio Website</title>
+        <!----CSS link----->
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="hero">
+            <nav>
+                <img src="DSC_0586.JPG" class="logo" />
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <a href="#" class="btn">Resume</a>
+            </nav>
+            <div class="content">
+                <span class="title">Freelance Web Developer</span>
+                <h1>Hello, I’m <span>Aditya</span></h1>
+                <p>
+                    A professional, visually sophisticated and
+                    technologically proficient.
+                </p>
+                <button onclick="downloadResume()" class="btn">Resume</button>
+            </div>
+        </div>
+        <script>
+            function downloadResume() {
+                var link = document.createElement('a');
+                link.href = 'https://drive.google.com/file/d/1bNy_0djVaZQ8A2fViJl5_qdFCYyCO6XH/view?usp=drive_link'; // Replace 'resume.pdf' with the URL or path to your resume file
+                link.download = 'Resume.pdf'; // You can customize the downloaded file name
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+        </script>
+        
+    </body>
+</html>
